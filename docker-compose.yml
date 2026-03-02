@@ -24,7 +24,7 @@ services:
       - mongo
 
   frontend:
-    build: ./frontend
+    build: ./training-app
     container_name: compliance-frontend
     restart: unless-stopped
     ports:

@@ -28,7 +28,7 @@ project-root/
 │  │  └─ middleware/        # Auth middlewares
 │  └─ package.json
 │
-├─ frontend/                # Frontend (React + Vite + Tailwind)
+├─ training-app/                # Frontend (React + Vite + Tailwind)
 │  ├─ src/
 │  ├─ index.html
 │  ├─ package.json
@@ -102,7 +102,7 @@ Mongoose automatically creates collections in MongoDB when you insert your first
 ### 1. Install dependencies
 
 ```bash
-cd frontend
+cd training-app
 npm install
 ```
 
@@ -159,7 +159,7 @@ services:
       - mongo
 
   frontend:
-    build: ./frontend
+    build: ./training-app
     container_name: compliance-frontend
     restart: unless-stopped
     ports:
