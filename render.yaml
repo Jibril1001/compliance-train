@@ -25,3 +25,7 @@ services:
       - key: VITE_API_URL
         # Replace with backend URL after deployment
         value: https://compliance-backend.onrender.com/api
+      - key: FRONTEND_URL
+        value: https://compliance-frontend.onrender.com
+      - key: PORT
+        value: 5173
