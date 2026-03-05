@@ -1,0 +1,27 @@
+# render.yaml
+services:
+  - type: web
+    name: compliance-backend
+    env: docker
+    rootDir: server
+    plan: free
+    envVars:
+      - key: PORT
+        value: 4000
+      - key: MONGO_URI
+        # You will fill this in with your Atlas connection string in Render UI
+        value: mongodb+srv://jibrilmustefa9283_db_user:5OA7ZuGFgWmURP9t@cluster0.y6omcvx.mongodb.net/?appName=Cluster0
+      - key: JWT_SECRET
+        value: supersecretkeyyugerhfd
+      - key: FRONTEND_URL
+        value: https://compliance-frontend.onrender.com
+
+  - type: web
+    name: compliance-frontend
+    env: docker
+    rootDir: training-app
+    plan: free
+    envVars:
+      - key: VITE_API_URL
+        # Replace with backend URL after deployment
+        value: https://compliance-backend.onrender.com/api

@@ -20,6 +20,7 @@ services:
       - PORT=4000
       - MONGO_URI=mongodb://mongo:27017/compliance_db
       - JWT_SECRET=supersecretkeyyugerhfd
+      - FRONTEND_URL=http://localhost:5173
     depends_on:
       - mongo
 
