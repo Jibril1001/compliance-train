@@ -14,7 +14,7 @@ services:
       - key: JWT_SECRET
         value: supersecretkeyyugerhfd
       - key: FRONTEND_URL
-        value: https://compliance-frontend.onrender.com
+        value: https://compliance-frontend-mu0j.onrender.com
 
   - type: web
     name: compliance-frontend
@@ -23,9 +23,8 @@ services:
     plan: free
     envVars:
       - key: VITE_API_URL
-        # Replace with backend URL after deployment
-        value: https://compliance-backend.onrender.com/api
+        value: https://compliance-backend-x12c.onrender.com/api
       - key: FRONTEND_URL
-        value: https://compliance-frontend.onrender.com
+        value: https://compliance-frontend-mu0j.onrender.com
       - key: PORT
         value: 5173
